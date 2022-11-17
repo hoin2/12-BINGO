@@ -3,9 +3,6 @@
 #include <time.h>
 #include "bingoBoard.h"
 
-#define BINGO_NUMSTATUS_ABSENT		-1
-#define BINGO_NUMSTATUS_PRESENT		0
-
 int main(int argc, char *argv[]) {
 	
 	srand((unsigned)time(NULL));
@@ -44,6 +41,7 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
+/*
 int get_number(void)
 	{
 		int selNum=0;
@@ -66,3 +64,4 @@ int bingo_checkNum(int selNum)
 {
 	
 }
+*/
