@@ -16,6 +16,8 @@ int main(int argc, char *argv[]) {
 	//generate numbers
 	bingo_init();
 	bingo_printBoard();
+	bingo_inputNum(5);
+	bingo_printBoard();
 
 	//initialize bingo boards
 	//while (game is not end)//줄수가 bingo보다 작음 

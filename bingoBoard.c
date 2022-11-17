@@ -5,7 +5,8 @@
 #define BINGO_NUMSTATUS_PRESENT		0
 
 
-int bingoBoard[N_SIZE][N_SIZE];
+static int bingoBoard[N_SIZE][N_SIZE];
+static int numberStatus[N_SIZE*N_SIZE];
 
 
 void bingo_init(void)
@@ -19,10 +20,14 @@ void bingo_init(void)
 			if(cnt==15)
 			{
 				bingoBoard[i][j]=BINGO_NUMSTATUS_ABSENT;
+				numberStatus[cnt-1]=BINGO_NUMSTATUS_ABSENT;
 				cnt++;
 			}
 			else
+			{
+				numberStatus[cnt-1]=i*N_SIZE+j;
 				bingoBoard[i][j]=cnt++;
+			}
 		}
 }
 
@@ -45,8 +50,15 @@ void bingo_printBoard(void)
 
 void bingo_inputNum(int sel)
 {
-		
+	int r_index;
+	int c_index;
+	
+	r_index=numberStatus[sel-1]/N_SIZE;
+	c_index=numberStatus[sel-1]%N_SIZE;
+	bingoBoard[r_index][c_index]=BINGO_NUMSTATUS_ABSENT;
+	
 }
+
 /*
 int bingo_countCompletedLine(void)
 {
