@@ -104,7 +104,7 @@ int bingo_countCompletedLine(void)
 		cnt++;
 	
 	for(i=0;i<N_SIZE;i++){
-	
+		checkBingo=1;
 		if(bingoBoard[i][N_SIZE-i-1]>0){
 			checkBingo=0;
 			break;
