@@ -1,7 +1,6 @@
 #include "bingoBoard.h"
 #include <stdlib.h>
-
-#define BINGO_HOLE	-1				
+				
 
 static int bingoBoard[N_SIZE][N_SIZE];
 static int numberStatus[N_SIZE*N_SIZE];

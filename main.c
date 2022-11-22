@@ -3,10 +3,6 @@
 #include <time.h>
 #include "bingoBoard.h"
 
-
-#define BINGO_NUMSTATUS_ABSENT	-1
-#define N_LINE					2
-#define N_SIZE					5
 #define BINGO_RES_UNFINISHED	0
 #define BINGO_RES_FINISHIED		1
 
